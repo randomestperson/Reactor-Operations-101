@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Reactor Operations 101</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Reactor Operations 101</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="reactor.html">The Reactor</a></li>
+								<li><a href="procedurelist.html">Important Procedures</a></li>
+                                <li><a href="systems.html">Plant Systems Directory</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="fas fa-atom"></span></div>
+							<h2>Startup Procedure</h2>
+							<p>Step-by-step guide to starting up the RBMK Reactor</p>
+						</div>
+					</section>
+			</div>
+            <section id="four" class="wrapper alt style1">
+                <div class="inner">
+                    <p>The startup procedure is the most crucial procedure and where the most things can go wrong if not followed correctly.</p>
+                    <h2>Startup Procedure</h4>
+                    <ol>
+                        <li>Check for any faulty systems or malfunctions.</li>
+                        <li>Turn on all the coolant pumps and set the Flowrate slider to <b>100%</b>.</li>
+                        <li>Select <b>all</b> the heat exchangers.</li>
+                        <li>Set the Steam and Water valve at the heat exchanger panel to <b>100%</b> and click <b>Set Value</b></li>
+                        <li>Turn off the OCCS (Offline Core Cooling Systems).</li>
+                        <li>Set the startup heater to <b>On</b></li>
+                        <li>Set Heaters and Fine Control Heater to <b>100%</b></li>
+                        <li>Set the startup heater to <b>Off</b> once water temperature surpasses 160°C</li>
+                        <li>Begin slowly removing the control rods using the insertion slider.</li>
+                        <li>Watch the thermal generation as it rises. As it increases, Xenon and Pressurizer Pressure should increase. You may notice the reactor core shifting colours. If the core changes to black, <b>IMMEDIATELY</b> insert the control rods.</li>
+                        <li>Once thermal generation has reached around 4GMW/s, begin to stabilize the reactor. Then, move onto the turbine run-up section.</li>
+                    </ol>
+                    <h2>Turbine Run-Up</h4>
+                    <p>Once the reactor is stable, you can begin to run up the turbines.</p>
+                    <ol>
+                        <li>Once the reactor is stable, set one of the turbine's bypass valve to <b>40%</b> and wait for the turbine to reach 3500 RPM.</li>
+                        <li>When nearing 3500 RPM, Begin increasing the bypass valve so that the turbine speed change becomes <b>+5</b> RPM.</li>
+                        <li>Once you see that RPM is at <b>3590-3610</b> with an RPM change of <b>±5</b>, click the Turbine Synchronization Button</li>
+                        <li>From here, slowly increase Generator Engagement and lower the Bypass Valve until you get to 100% Engagement and 0% Bypass Valve <b>(do not let RPM Change to get out of the ±5 range or else the Turbines will desync and you'll have to adjust the Bypass Valve to get it back down to 3590-3610 RPM)</b>.</li>
+                        <li>Repeat steps for the next 3 Turbines until you have finished syncing the Turbines.</li>
+                    </ol>
+                    <h2>Grid Management</h2>
+                    <p>Once all turbines are synchronized, connect them to the grid.</p>
+                    <ol>
+                        <li>Contact your grid operator to request connection.</li>
+                        <li>Ensure turbine output does not exceed 200MW/s otherwise they will trip.</li>
+                    </ol>
+                    <h2>Proceed to operation procedure once started</h2>
+                </div>
+            </section>
+            <section id="four" class="wrapper style1">
+                <div class="inner">
+                    <h2 class="major">Other Procedures</h2>
+                    <p>Other important procedures when it comes to reactor operations.</p>
+                    <section class="features">
+                        <article>
+                            <a href="shutdown.html" class="image"><img src="images/NPPCoreDry.png" alt="" /></a>
+                            <h3 class="major">Shutdown Procedure</h3>
+                            <p>Instructions for safely shutting down the reactor.</p>
+                            <a href="shutdown.html" class="special">Learn more</a>
+                        </article>
+                        <article>
+                            <a href="malfunctions.html" class="image"><img src="images/NPP_monitor_failed.png" alt="" /></a>
+                            <h3 class="major">Malfunctions</h3>
+                            <p>Common issues, how to identify and resolve them.</p>
+                            <a href="malfunctions.html" class="special">Learn more</a>
+                        </article>
+                        <article>
+                            <a href="maintenance.html" class="image"><img src="images/uh.png" alt="" /></a>
+                            <h3 class="major">Maintenance Routines</h3> 
+                            <p>Procedures for regular maintenance and inspection of the reactor.</p>
+                            <a href="maintenance.html" class="special">Learn more</a>
+                        </article>
+                        <article>
+                            <a href="emergency.html" class="image"><img src="images/NPP_Meltdown.png" alt="" /></a>
+                            <h3 class="major">Emergency Protocols</h3>
+                            <p>Procedures for handling emergency situations in the reactor.</p>
+                            <a href="emergency.html" class="special">Learn more</a>
+                        </article>
+                    </section>
+                    <ul class="actions">
+                        <li><a href="procedurelist.html" class="button">Browse All</a></li>
+                    </ul>
+                </div>
+            </section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
