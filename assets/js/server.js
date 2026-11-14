@@ -1,15 +1,19 @@
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
+
+// Serve all static files (HTML, CSS, images) from the project root
+app.use(express.static(path.join(__dirname)));
 
 // 1. Initialize local SQLite database
 const db = new sqlite3.Database('./messages.db', (err) => {
@@ -31,8 +35,8 @@ const db = new sqlite3.Database('./messages.db', (err) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'yeyintlwin30@gmail.com',        // Replace with your Gmail address
-        pass: 'hlqfqwouovhyqpan'     // Replace with your Gmail App Password
+        user: 'yeyintlwin30@gmail.com',        // Your Gmail address
+        pass: 'hlqfqwouovhyqpan'     // Your Gmail App Password
     }
 });
 
@@ -90,5 +94,5 @@ app.post('/send', (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
